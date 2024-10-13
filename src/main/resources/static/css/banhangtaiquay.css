@@ -1,0 +1,137 @@
+.dohangform{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    align-items: center;
+    border: none;
+    width: 100%;
+}
+.formbutton1{
+    border: none;
+    background: none;
+}
+.dohangform div{
+    background-color: #cccccc;
+    padding: -20px;
+    border-radius: 5px 5px 0 0;
+    max-height: 5%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.selectsss{
+    transform: scale(2.5);
+    margin: 10px;
+}
+.submitdonhang{
+    display: flex;
+    justify-content: space-between;
+}
+.thanhtoans{
+    width: 100%;
+    align-items: center;
+    height: 50px;
+}
+#tongtien111{
+    font-weight: bold;
+    font-size: 20px;
+}
+#khachtra111{
+    font-weight: bold;
+    font-size: 20px;
+}
+#soTienThanhToan111{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#Modal-form {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.ssssssf{
+    display: flex;
+    justify-content: end;
+}
+.sssssssf div{
+   padding-left: 10px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Độ rộng modal */
+    max-width: 1200px;
+}
+
+.table-wrapper {
+    max-height: 400px; /* Giới hạn chiều cao bảng */
+    overflow-y: auto;  /* Cuộn dọc */
+    overflow-x: auto;  /* Cuộn ngang nếu cần */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: #f1f1f1;
+}
+.locsanpham{
+    margin-left: 20px;
+    max-width: 150px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.moidal-1{
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 10px;
+}

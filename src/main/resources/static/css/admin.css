@@ -1,0 +1,139 @@
+
+.headerlayout{ grid-area: header;}
+.optionslayout{ grid-area: options;}
+.mainlayout{grid-area: main;}
+.contentarea{
+display: grid;
+grid-template-areas: 
+'options header'
+'options main'
+;
+grid-template-rows: 10% 90%;
+grid-template-columns: 15% 85%;
+}
+.imglayout{
+    text-align: center;
+    
+}
+.imglayout h4{
+    position: relative;
+    bottom: 25px;
+}
+.optionslayout{
+    width: auto;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.headerlayout{
+    box-shadow: rgba(0, 0, 0, 0.35) 20px 5px 15px;
+    height: 100px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.headerlayout div{
+    width: 50px;
+    height: auto;
+}
+.headerlayout div button{
+ border: none;
+ background: none;
+ width: 50px;
+ height: auto;
+}
+.mainlayout{
+    height: calc(98vh - 1px - 86px);
+    overflow-y: auto;
+    padding-top: 10px;
+}
+.mainlayout div{
+    padding: 20px;
+}
+
+.taskbar button:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.taskbar button{
+    text-align: left;
+    text-align: start;
+    background: none;
+    width: 100%;
+    height: 40%;
+    margin-top: 20px;
+    list-style: none;
+    border: none;
+}
+.taskbar button a{
+    text-decoration: none;
+    color:#333;
+    
+}
+.fa-solid{
+    font-size: 25px;
+    padding-right: 20px;
+}
+.taskbar button div a i{
+    position: relative;
+    top: 6px;
+    font-size: 30px;
+}
+.tablelistsanpham{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+.tablelistsanpham1{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+
+.submenu{
+    display: none;
+    padding-top: 10px;
+}
+.submenu li{
+    padding-top: 10px;
+}
+.submenu li:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.submenu1{
+    display: none;
+    padding-top: 10px;
+}
+.submenu1 li{
+    padding-top: 10px;
+}
+.submenu1 li:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.div1{
+    display: flex;
+    justify-content: space-between;
+}
+.mainmenuoption{
+    width: 100%;
+}
+#dmms{
+    padding-left: 12px;
+}
+.taskbar button{
+    height: auto;
+    min-height: 30px;
+}
+.valitrangthaikhuyenmai{
+    width: 1px;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    transition: width 0.5s ;
+}
+.valitrangthaikhuyenmai.show{
+    width: 100%;
+}
+

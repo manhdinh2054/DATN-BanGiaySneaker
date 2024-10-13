@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="contentarea">
+
+    <div class="headerlayout">
+        <div>
+            <button>
+                <i class="fa-solid fa-bell"></i>
+            </button>
+
+        </div>
+        <div>
+            <img src="#" alt="logo" srcset="">
+        </div>
+
+    </div>
+    <div class="optionslayout">
+        <div class="imglayout">
+            <img src="/images/logo.jpg" alt="logo" width="150px">
+            <h4>Admin Panel</h4>
+        </div>
+        <div class="taskbar">
+            <button>
+                <i class=" fa-solid fa-cash-register"></i>
+                <a href="/admin/muahangtaiquay">Mua hàng tại quầy </a>
+            </button>
+            <button id="btnchange">
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a class="mainmenuoption" href="#">Quản lí sản phẩm</a>
+                    <i id="dmms" class="fa-solid1 fa-solid fa-angle-right fa-spin fa-spin-reverse fa-2xs"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/admin/quanlisanpham">Sản Phẩm</a></li>
+                    <li><a href="#">Thương hiệu</a></li>
+                </ul>
+            </button>
+            <button>
+                <i class="fa-solid fa-receipt"></i>
+                <a href="/admin/quanlihoadon">Quản lý hóa đơn </a>
+            </button>
+            <button id="btnchange1">
+                <div>
+                    <i class="fa-solid fa-clipboard-user"></i>
+                    <a class="mainmenuoption" href="#">Quản lý Tài Khoản</a>
+                    <i id="dmms1" class="fa-solid1 fa-solid fa-angle-right fa-spin fa-spin-reverse fa-2xs"></i>
+                </div>
+                <ul class="submenu1">
+                    <li><a href="/admin/quanlinhanvien">Nhân Viên</a></li>
+                    <li><a href="/admin/quanlikhachhang">Khách Hàng</a></li>
+                </ul>
+            </button>
+            <button>
+                <i class="fa-solid fa-ticket"></i>
+                <a href="/admin/quanlikhuyenmai">Quản lý khuyến mại </a>
+            </button>
+            <button>
+                <i class="fa-solid fa-chart-line"></i>
+                <a href="/admin/thongke">Thống kê</a>
+            </button>
+        </div>
+    </div>
+    <div class="mainlayout">
+        <hr>
+        <div class="tablelistsanpham">
+            <div class="tablelistsanpham1">
+                <div>
+                    <h3>Danh sách sản phẩm</h3>
+                    <button type="button" class="btn btn-primary">Thêm sản phẩm</button>
+                </div>
+
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã khuyến mại</th>
+                        <th>Giảm Giá(%)</th>
+                        <th>Giảm Giá($)</th>
+                        <th>Điều kiện</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Trạng Thái</th>
+                    </tr>
+                    </thead>
+                    <tbody th:each="lstkhuyenmai1,stat:${lstkhuyenmai}">
+                    <tr>
+                        <td th:text="${stat.index+1}"></td>
+                        <td th:text="${lstkhuyenmai1.id}"></td>
+                        <td th:text="${lstkhuyenmai1.giamGiaPhamTram}"></td>
+                        <td th:text="${lstkhuyenmai1.giamGiaSoTien}"></td>
+                        <td th:text="${lstkhuyenmai1.dieuKienApDung}"></td>
+                        <td th:text="${lstkhuyenmai1.ngayBatDau}"></td>
+                        <td th:text="${lstkhuyenmai1.ngayKetThuc}"></td>
+                        <td>
+                            <input type="hidden" id="valuesss" th:value="${lstkhuyenmai1.trangThai}">
+                            <p class="valitrangthaikhuyenmai" th:text="${lstkhuyenmai1.trangThai  == true ? 'Đang hoạt động':'Ngưng hoạt động'}"></p>
+                        </td>
+                        <td>
+                            <a href="">Sửa</a>
+                            <a href="">Xóa</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/admin.js"></script>
+<script src="/js/khuyenmai.js"></script>
+<script src="https://kit.fontawesome.com/39f1c218af.js" crossorigin="anonymous"></script>
+
+</html>

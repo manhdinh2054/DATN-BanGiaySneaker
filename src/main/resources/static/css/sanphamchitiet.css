@@ -1,0 +1,183 @@
+
+.layoutchitiet{
+    background-color: #f5f5f5;
+    position: relative;
+    bottom: 20px;
+}
+.itemchitiet{
+  gap: 10px;
+  border-radius: 10px;
+    background-color: white;
+    height: 550px;
+    display: flex;
+    margin-top: 20px;
+    text-align: left;
+}
+.imgchitiet{
+    margin-top: 20px;
+    background-color: white;
+    text-align: center;
+    align-content: center;
+    width: 450px;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.noidungchitietsanpham{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.noidungchitietsanpham div{
+    padding-top: 20px;
+}
+.noidungchitietsanpham p {
+    font-weight: 600;
+    font-size: 30px;
+}
+.pricechitiet{
+    background-color: #fafafa;
+}
+
+  .custom-radio {
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  .custom-radio input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .custom-radio{
+    position: relative;
+    top: 20px;
+    left: 10px;
+  }
+  
+  .custom-radio .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+  
+  .custom-radio input[type="radio"]:checked + .checkmark {
+    background: #2196F3;
+    border: none;
+  }
+  
+  .custom-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .custom-radio input[type="radio"]:checked + .checkmark:after {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 5px;
+    left: 5px;
+  }
+
+.custom-size{
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+    cursor: pointer;
+}
+.custom-size .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 50px;
+    border: 2px solid #ccc;
+    border-radius: 0;
+    transition: all 0.2s;
+}
+.custom-size {
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+    cursor: pointer;
+  }
+  .btn-group{
+    width: 150px;
+  }
+  .custom-size input[type="radio"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .custom-size{
+    position: relative;
+    top: 20px;
+    left: 10px;
+  }
+  
+  .custom-size .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+  
+  .custom-size input[type="radio"]:checked + .checkmark {
+    background: #2196F3;
+    border: none;
+  }
+  
+  .custom-size .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .custom-size input[type="radio"]:checked + .checkmark:after {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 5px;
+    left: 5px;
+  }
+
+
+
+.pricechitiet span{
+    padding-bottom: 25px;
+    padding-left: 25px;
+    color: red;
+    font-size: 30px;
+    font-weight: 600;
+}
+.detailinformations{
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+
+footer{
+  background-color: white;
+  text-align: center;
+}
