@@ -22,7 +22,7 @@ public class SanPhamDTO {
     private String mota;
     private String mauSac;
     private Integer kichCo;
-    private Integer soLuowng;
+    private Integer soLuong;
     private String anhSanPham;
     private String tenThuongHieu;
     private BigDecimal gia;

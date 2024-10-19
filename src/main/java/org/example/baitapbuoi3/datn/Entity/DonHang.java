@@ -2,7 +2,9 @@ package org.example.baitapbuoi3.datn.Entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Nationalized;
 
@@ -13,6 +15,8 @@ import java.util.Set;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class DonHang {
     @Id
@@ -23,6 +27,10 @@ public class DonHang {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idKhachHang")
     private KhacHhang idKhachHang;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idNhanVien")
+    private NhanVien idNhanVien;
 
     @Column(name = "ngayTaoDon")
     private Instant ngayTaoDon;
@@ -56,6 +64,9 @@ public class DonHang {
 
     @Column(name = "khachTra", precision = 10, scale = 2)
     private BigDecimal khachTra;
+
+    @Column(name = "hinhThucThanhToan")
+    private Boolean hinhThucThanhToan;
 
     @OneToMany(mappedBy = "idDonHang")
     private Set<DonHangChiTiet> donHangChiTiets = new LinkedHashSet<>();

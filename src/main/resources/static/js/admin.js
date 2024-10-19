@@ -70,5 +70,43 @@ window.onload = function (){
 }
 
 
+window.onload = function (){
+    const httt = document.querySelectorAll(".hinhthucthanhtoan");
+    httt.forEach(function (item) {
+        if(item.textContent == "Tại quầy"){
+            item.style.backgroundColor = "green";
+            item.style.color = "black";
+            item.style.borderRadius = "10px";
+            item.style.textAlign = "center";
+
+        }else {
+            item.style.backgroundColor = "red";
+            item.style.color = "black";
+            item.style.borderRadius = "10px";
+            item.style.textAlign = "center";
+        }
+    })
+    const trangthai = document.querySelectorAll(".trangthaiform");
+    trangthai.forEach(function (item) {
+        if(item.textContent == "Đã thanh toán"){
+            item.style.backgroundColor = "green";
+            item.style.color = "black";
+            item.style.borderRadius = "10px";
+            item.style.textAlign = "center";
+
+        }else if(item.textContent == "Đã hủy"){
+            item.style.backgroundColor = "red";
+            item.style.color = "black";
+            item.style.borderRadius = "10px";
+            item.style.textAlign = "center";
+        }else {
+            item.style.backgroundColor = "yellow";
+            item.style.color = "black";
+            item.style.borderRadius = "10px";
+            item.style.textAlign = "center";
+        }
+    })
+}
+
 
 

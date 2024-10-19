@@ -77,49 +77,155 @@
             <div class="tablelistsanpham">
                 <div class="tablelistsanpham1">
                     <div>
-                        <h3>Danh sách sản phẩm</h3>
-                        <button type="button" class="btn btn-primary">Thêm sản phẩm</button>
-                    </div>
+                        <h3>Quản lý hóa đơn</h3>
+                        <div>
+                            <form th:action="@{/admin/quanlihoadon/search}" method="get" class="d-flex">
+                                <div>
+                                    <input name="sdtKhachHang" class="form-control" style="max-width: 300px;" placeholder="nhập số điện thoại...">
+                                    <button type="submit" class="btn btn-primary" style="margin-left: 10px">Tìm kiếm</button>
+                                </div>
+                                <div>
+                                    <select name="trangThai" class="form-control" style="max-width: 400px;">
+                                        <option value="00">Tất cả</option>
+                                        <option value="1">Đã thanh toán</option>
+                                        <option value="2">Chờ xác nhận</option>
+                                        <option value="3">Đang giao hàng(Chưa thanh toán)</option>
+                                        <option value="4">Đã giao hàng</option>
+                                        <option value="5">Đã hủy</option>
+                                    </select>
+                                </div>
 
+                            </form>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã Hóa Đơn</th>
+                                <th>Khách hàng</th>
+                                <th>SĐT khách hàng</th>
+                                <th>Tổng tiền</th>
+                                <th>Ngày lập hóa đơn</th>
+                                <th>Hình thức thanh toán</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                            </thead>
+                            <tbody >
+                            <tr>
+                                <td>1</td>
+                                <td>HD001</td>
+                                <td>Nguy��n Văn A</td>
+                                <td>0987654321</td>
+                                <td>100000</td>
+                                <td>2022-01-01</td>
+                                <td>Tiền mặt</td>
+                                <td>Đã thanh toán</td>
+                                <td>
+                                    <a href="#"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="#"><i class="fa-solid fa-edit"></i></a>
+                                    <a href="#"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="d-flex justify-content-center">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li class="page-item" th:classappend="${!hdlst.hasPrevious()}? 'disabled'">
+                                        <a class="page-link" th:href="@{/admin/quanlihoadon(page=${hdlst.number - 1}, size=${hdlst.size})}">Previous</a>
+                                    </li>
+
+                                    <li class="page-item" th:each="i : ${#numbers.sequence(1, hdlst.totalPages)}"
+                                        th:classappend="${i == hdlst.number + 1} ? 'active'">
+                                        <a class="page-link" th:href="@{/admin/quanlihoadon(page=${i - 1}, size=${hdlst.size})}"
+                                           th:text="${i}">1</a>
+                                    </li>
+
+                                    <li class="page-item" th:classappend="${!hdlst.hasNext()}? 'disabled'">
+                                        <a class="page-link" th:href="@{/admin/quanlihoadon(page=${hdlst.number + 1}, size=${hdlst.size})}">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="tablelistsanpham1">
+                    <div>
+                        <h3>Lịch sử hóa đơn</h3>
+                        <form th:action="@{/admin/quanlihoadon/search}" method="get" class="d-flex">
+                            <div>
+                                <input id="sdtKhachHang" name="sdtKhachHang" class="form-control" style="max-width: 300px;" placeholder="nhập số điện thoại...">
+                                <button type="submit" class="btn btn-primary" style="margin-left: 10px">Tìm kiếm</button>
+                            </div>
+                            <div>
+                                <select id="trangThai" name="trangThai" class="form-control" style="max-width: 400px;">
+                                    <option value="00">Tất cả</option>
+                                    <option value="1">Đã thanh toán</option>
+                                    <option value="2">Chờ xác nhận</option>
+                                    <option value="3">Đang giao hàng(Chưa thanh toán)</option>
+                                    <option value="4">Đã giao hàng</option>
+                                    <option value="5">Đã hủy</option>
+                                </select>
+                            </div>
+
+                        </form>
+                    </div>
                     <table class="table table-bordered">
+                        <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Giá</th>
-                            <th>Số lượng</th>
+                            <th>Mã Hóa Đơn</th>
+                            <th>Khách hàng</th>
+                            <th>SĐT khách hàng</th>
+                            <th>Tổng tiền</th>
+                            <th>Ngày lập hóa đơn</th>
+                            <th>Hình thức thanh toán</th>
+                            <th>Trạng thái</th>
                             <th>Thao tác</th>
                         </tr>
+                        </thead>
+                        <tbody th:each="hoadonlst,stat:${hdlst}">
                         <tr>
-                            <td>1</td>
-                            <td>Sản phẩm 1</td>
-                            <td>100000</td>
-                            <td>100</td>
+                            <td th:text="${stat.index+1}"></td>
+                            <td th:text="${hoadonlst.id}"></td>
+                            <td th:text="${hoadonlst.tenKhachhang}"></td>
+                            <td th:text="${hoadonlst.sdtKhachHang}"></td>
+                            <td th:text="${hoadonlst.tongTien}"></td>
+                            <td th:text="${hoadonlst.ngayLapHoaDon}"></td>
                             <td>
-                                <a href="">Sửa</a>
-                                <a href="">Xóa</a>
+                                <p class="hinhthucthanhtoan" th:text="${hoadonlst.hinhThucThanhToan == true ?'Tại quầy':'Online'}"></p>
+                            </td>
+                            <td>
+                                <p class="trangthaiform" th:text="${hoadonlst.trangThai == 0 ? 'Chưa thanh toán' : (hoadonlst.trangThai == 1 ? 'Đã thanh toán' : (hoadonlst.trangThai == 2 ? 'Đang giao hàng' : (hoadonlst.trangThai == 3 ? 'Đã giao hàng' : 'Trạng thái không xác định')))}"></p>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-eye trangthau"></i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Sản phẩm 2</td>
-                            <td>200000</td>
-                            <td>100</td>
-                            <td>
-                                <a href="">Sửa</a>
-                                <a href="">Xóa</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Sản phẩm 2</td>
-                            <td>200000</td>
-                            <td>100</td>
-                            <td>
-                                <a href="">Sửa</a>
-                                <a href="">Xóa</a>
-                            </td>
-                        </tr>
+                        </tbody>
                     </table>
+
+                    <div class="d-flex justify-content-center">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li class="page-item" th:classappend="${!hdlst.hasPrevious()}? 'disabled'">
+                                    <a class="page-link" th:href="@{/admin/quanlihoadon(page=${hdlst.number - 1}, size=${hdlst.size})}">Previous</a>
+                                </li>
+
+                                <li class="page-item" th:each="i : ${#numbers.sequence(1, hdlst.totalPages)}"
+                                    th:classappend="${i == hdlst.number + 1} ? 'active'">
+                                    <a class="page-link" th:href="@{/admin/quanlihoadon(page=${i - 1}, size=${hdlst.size})}"
+                                       th:text="${i}">1</a>
+                                </li>
+
+                                <li class="page-item" th:classappend="${!hdlst.hasNext()}? 'disabled'">
+                                    <a class="page-link" th:href="@{/admin/quanlihoadon(page=${hdlst.number + 1}, size=${hdlst.size})}">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
 
             </div>

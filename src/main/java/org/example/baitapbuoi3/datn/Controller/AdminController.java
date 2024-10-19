@@ -1,16 +1,15 @@
 package org.example.baitapbuoi3.datn.Controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.baitapbuoi3.datn.Entity.DonHang;
-import org.example.baitapbuoi3.datn.Entity.KhacHhang;
-import org.example.baitapbuoi3.datn.Entity.NhanVien;
-import org.example.baitapbuoi3.datn.Entity.SanPham;
+import org.example.baitapbuoi3.datn.Entity.*;
 import org.example.baitapbuoi3.datn.Repository.DonHangInterface;
 import org.example.baitapbuoi3.datn.Repository.SanPhamInterface;
+import org.example.baitapbuoi3.datn.Services.HoaDonServices;
 import org.example.baitapbuoi3.datn.Services.SanPhamServices;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -24,6 +23,7 @@ public class AdminController {
 //    private final NhanVienInterface nvi;
     private final DonHangInterface dhi;
     private final SanPhamServices spsv;
+    private final HoaDonServices hdsv;
 //    private final KhachHangServices khsv;
     @RequestMapping("/muahangtaiquay")
     public String muahangTaiQuay(Model model) {
@@ -38,14 +38,14 @@ public class AdminController {
 //        return "admin/quanlisanpham";
 //    }
 
+
     @RequestMapping("/quanlihoadon")
-    public String quanLiHoaDon() {
+    public String quanLiHoaDonH(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10")int size, Model model) {
+        Page<HoaDon> hdlst = hdsv.findAllHoaDonPage(page,size);
+        model.addAttribute("hdlst", hdlst);
         return "admin/quanlihoadon";
     }
-//    @RequestMapping("/quanlivoucher")
-//    public String quanLiVoucher() {
-//        return "admin/quanlivoucher";
-//    }
+
 //    @RequestMapping("/quanlinhanvien")
 //    public String quanLiNhanVien(Model model) {
 //        List<NhanVien> lst = nvi.findAll();

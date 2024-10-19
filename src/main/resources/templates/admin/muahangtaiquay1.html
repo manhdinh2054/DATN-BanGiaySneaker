@@ -147,7 +147,8 @@
                                 </div>
                                 <div class="displayloaithanhtoantienmat">
                                     <label class="form-label">Khách trả:</label>
-                                    <input class="form-control" type="number" id="khachtra" name="khachTra" oninput="khachTra1111()">
+                                    <input class="form-control" type="number" id="khachtra" name="khachTra"
+                                           oninput="khachTra1111()">
                                 </div>
                                 <div class="displaylaoithanhtoanchuyenkhoan">
                                     <label class="form-label">Mã Giao Dịch</label>
@@ -263,10 +264,11 @@
                     <td th:text="${sanphamlst.kichCo}"></td>
                     <td th:text="${sanphamlst.tenThuongHieu}"></td>
                     <td th:text="${sanphamlst.tenDanhMuc}"></td>
-                    <td th:text="${sanphamlst.soLuowng}"></td>
+                    <td th:text="${sanphamlst.soLuong}"></td>
                     <td class="giasp111" th:text="${sanphamlst.gia}"></td>
                     <td>
                         <input type="hidden" name="idsss" th:value="${donhangtrongsp.id}">
+                        <input type="hidden" name="idHoaDon" th:value="${sanphamlst.id}">
                         <input type="hidden" name="idDonHang" th:value="${donhangtrongsp.id}">
                         <input type="hidden" name="donGia" th:value="${sanphamlst.gia}">
                         <input class="selectsss" type="checkbox" name="idSanPham" th:value="${sanphamlst.id}"
@@ -279,7 +281,8 @@
                 <div>
                     <label>Số Lượng:</label>
                     <button type="button" id="giamSL" class="btn btn-basic btn-sm">-</button>
-                    <input type="number" class="soLuong11" id="valueSL" name="soLuong" min="1" value="1" style="width: 50px;">
+                    <input type="number" class="soLuong11" id="valueSL" name="soLuong" min="1" value="1"
+                           style="width: 50px;">
                     <button type="button" id="tangSL" class="btn btn-basic btn-sm">+</button>
                 </div>
                 <div>

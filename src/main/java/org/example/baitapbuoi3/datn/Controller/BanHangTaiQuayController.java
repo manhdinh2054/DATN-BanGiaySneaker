@@ -3,6 +3,7 @@ package org.example.baitapbuoi3.datn.Controller;
 import lombok.RequiredArgsConstructor;
 import org.example.baitapbuoi3.datn.Entity.*;
 import org.example.baitapbuoi3.datn.Repository.*;
+import org.example.baitapbuoi3.datn.Services.ChuyenHoaDonServices;
 import org.example.baitapbuoi3.datn.Services.SanPhamServices;
 import org.example.baitapbuoi3.datn.Repository.*;
 import org.springframework.stereotype.Controller;
@@ -25,6 +26,9 @@ public class BanHangTaiQuayController {
     private final DonHangChiTietDTOInterface dhctdtoi;
     private final SanPhamDTOInterface spdtoi;
     private final SanPhamServices spsv;
+    private final HoaDonInterface hdi;
+    private final HoaDonChiTietInterface hdcti;
+    private final ChuyenHoaDonServices chdsv;
 
     @RequestMapping("/admin/muahangtaiquay/add")
     public String addSanPham(DonHang dh, DonHangChiTiet dhct, RedirectAttributes redirectAttributes) {
@@ -88,7 +92,12 @@ public class BanHangTaiQuayController {
     public String addHoaDon(@RequestParam("idsss") int id,DonHang donHang) {
         donHang.setId(id);
         donHang.setNgayTaoDon(Instant.now());
+        donHang.setTrangThai(1);
+        donHang.setHinhThucThanhToan(true);
         dhi.save(donHang);
-        return "redirect:/admin/muahangtaiquay/";
+        chdsv.TransferToHoaDonService(id);
+        chdsv.TransferToHoaDonChiTietService(id);
+        dhi.deleteById(id);
+        return "redirect:/admin/muahangtaiquay";
     }
 }

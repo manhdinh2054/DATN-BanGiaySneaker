@@ -29,4 +29,5 @@ public class SanPhamServices {
         Pageable pageable = PageRequest.of(page,size);
         return sanPhamInterface.findDetailSanPham(pageable,masanpham);
     }
+
 }

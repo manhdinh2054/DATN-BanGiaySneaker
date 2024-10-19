@@ -87,8 +87,11 @@ grid-template-columns: 15% 85%;
 .tablelistsanpham1{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
+    margin-top: 20px;
 }
-
+.trangthau{
+    color: black;
+}
 
 .submenu{
     display: none;
