@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.springframework.org/security/tags">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/banhangtaiquay.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="contentarea">
+
+    <div class="headerlayout">
+        <div sec:authorize="isAuthenticated()">
+            <div class="formloginuser">
+                <div class="ussdds">
+                    <span style="color: black">ADMIN</span>
+                </div>
+
+                <form th:action="@{/logout}" method="post">
+                    <button id="buttonlogout" class="buttonlogout" type="submit">Đăng xuất</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="optionslayout">
+        <div class="imglayout">
+            <img src="/images/logo/logo.jpg" alt="logo" width="150px">
+            <h4>Admin Panel</h4>
+        </div>
+        <div class="taskbar">
+
+            <button id="btnchange">
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a class="mainmenuoption" href="#">Quản lí sản phẩm</a>
+                    <i id="dmms" class="fa-solid1 fa-solid fa-angle-right fa-spin fa-spin-reverse fa-2xs"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/admin/quanlisanpham">Sản Phẩm</a></li>
+                    <li><a href="#">Thương hiệu</a></li>
+                </ul>
+            </button>
+            <button>
+                <i class="fa-solid fa-receipt"></i>
+                <a href="/admin/quanlihoadon/quanli">Quản lý hóa đơn</a>
+            </button>
+
+            <button id="btnchange1">
+                <div>
+                    <i class="fa-solid fa-clipboard-user"></i>
+                    <a class="mainmenuoption" href="#">Quản lý Tài Khoản</a>
+                    <i id="dmms1" class="fa-solid1 fa-solid fa-angle-right fa-spin fa-spin-reverse fa-2xs"></i>
+                </div>
+                <ul class="submenu1">
+                    <li><a href="/admin/quanlinhanvien">Nhân Viên</a></li>
+                    <li><a href="/admin/quanlikhachhang">Khách Hàng</a></li>
+                </ul>
+            </button>
+            <button>
+                <i class="fa-solid fa-ticket"></i>
+                <a href="/admin/quanlikhuyenmai">Quản lý khuyến mại </a>
+            </button>
+            <button>
+                <i class="fa-solid fa-chart-line"></i>
+                <a href="/admin/thongke">Thống kê</a>
+            </button>
+        </div>
+    </div>
+    <div class="mainlayout">
+        <div class="tablelistsanpham">
+            <div class="tablelistsanpham1">
+                <div>
+                    <h3>Bán hàng</h3>
+                    <form th:action="@{/admin/muahangtaiquay/add}" method="post">
+
+                        <button type="submit" class="btn btn-primary">Tạo đơn hàng</button>
+                        <input type="hidden" id="check5hoadon" th:if="${errorthemhoadon}" th:value="${errorthemhoadon}">
+                    </form>
+                    <div class="dohangform">
+                            <div  th:if="lstdonhang1" th:each="lstdonhang1,stat:${lstdonhang}">
+                                <a th:href="@{/admin/muahangtaiquay/{id}(id=${lstdonhang1.id})}"><button class="formbutton1" type="button" id="clickhoadon" th:value="${lstdonhang1.id}" th:text="'Đơn Hàng' +${stat.index+1}+'- ID:'+${lstdonhang1.id}">
+                                </button></a>
+
+                                <a class="remove-button" th:href="@{/admin/muahangtaiquay/delete/{id}(id=${lstdonhang1.id})}"><i class="fa-solid fa-x fa-2xs" style="color: #000000;"></i></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/admin.js"></script>
+<script src="https://kit.fontawesome.com/39f1c218af.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+</html>

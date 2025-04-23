@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<head>
+    <link rel="stylesheet" href="/css/thongbao.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán Thành Công</title>
+</head>
+<body>
+<div class="success-message">
+    <h2 th:text="'Thanh Toán Thành Công Đơn Hàng '+${hoadonlst.id}"></h2>
+    <p>Cảm ơn bạn đã mua sắm tại chúng tôi</p>
+</div>
+
+<div class="order-details">
+    <h3>Thông Tin Đơn Hàng</h3>
+    <div>
+        <div>
+            <label>Mã hóa đơn:</label>
+            <span th:text="${hoadonlst.id}"></span>
+        </div>
+        <div>
+            <label>Tên khách hàng:</label>
+            <span th:text="${hoadonlst.tenKhachhang}"></span>
+        </div>
+        <div>
+            <label>SĐT:</label>
+            <span th:text="${hoadonlst.sdtKhachHang}"></span>
+        </div>
+        <div>
+            <label>Người thanh toán:</label>
+            <span th:text="${hoadonlst.idAccountNhanVien}"></span>
+        </div>
+        <div>
+            <label>Ngày tạo:</label>
+            <span th:text="${hoadonlst.ngayLapHoaDon}"></span>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên sản phẩm</th>
+            <th>Kích cỡ</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="hoadonchitietlst,stat : ${hoadonchitietlst}">
+            <td th:text="${stat.index+1}"></td>
+            <td th:text="${hoadonchitietlst.tenSanPham}"></td>
+            <td th:text="${hoadonchitietlst.kichCo}"></td>
+            <td th:text="${hoadonchitietlst.soLuong}"></td>
+            <td th:text="${hoadonchitietlst.donGia}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div style="text-align: right;font-size: 20px;font-weight: 600">
+        <label>Tổng tiền:</label>
+        <span th:text="${#numbers.formatCurrency(hoadonlst.tongTien)}"></span>
+
+
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <div class="back-to-home">
+        <a class="btn btn-danger" href="/admin/muahangtaiquay">Quay lại</a>
+    </div>
+    <div class="back-to-home" style="margin-left: 10px">
+        <button class="btn btn-primary" id="btnExportPdf" th:onclick="|fetchAndDisplayPDFAdmin(${hoadonlst.id})|">Xuất Hóa Đơn PDF</button>
+    </div>
+</div>
+
+</body>
+<script src="/js/quanlisanpham.js"></script>
+</html>

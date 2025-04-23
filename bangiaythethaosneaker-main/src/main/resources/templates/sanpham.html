@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SanPham</title>
+    <link rel="stylesheet" href="/css/sanpham.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+<div>
+    <div class="d-flex formslogin">
+        <div class="dropdown-container">
+            <button onclick="toggleDropdown()">
+                HELLO USER
+            </button>
+            <div id="myDropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <p></p>
+                <a class="dropdown-item" href="#">Giỏ hàng</a>
+                <a class="dropdown-item" href="">Tài khoản</a>
+                <a class="dropdown-item loggout" onclick="return logoutcheck()" id="" href="/logout">Đăng
+                    Xuất</a>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="headerlayout">
+            <div class="logo-sneaker">
+                <a th:href="@{/sanpham}">
+                    <img th:src="@{/images/logo/logo.jpg}" alt="Logo" style="max-width: 100px;">
+                    <h4>Sneaker Shop</h4>
+                </a>
+            </div>
+
+            <div class="danhmucform">
+                <div>
+                    <button class="btn" id="hoverdanhmuc">Danh Mục</button>
+                    <ul class="formhoverdanhmuc">
+                        <li th:each="damhmuclst:${lstdanhmuc}">
+                            <a th:href="@{/sanpham/danhmuc/{id}(id=${damhmuclst.id})}">
+                                <span th:text="${damhmuclst.tenDanhMuc}"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <button class="btn" id="hoverthuonghieu">Thương Hiệu</button>
+                    <ul class="formhoverthuonghieu">
+                        <li th:each="lstthuonghieu1:${lstthuonghieu}">
+                            <a th:href="@{/sanpham/thuonghieu/{id}(id=${lstthuonghieu1.id})}">
+                                <span th:text="${lstthuonghieu1.tenThuongHieu}"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="searchform">
+                <input class="" placeholder="bạn cần tìm gì?">
+                <button class=""><i class='bx bx-search'></i></button>
+            </div>
+            <div class="cartform">
+                <div class="giohang">
+                    <a th:href="@{/cart/view}"><i class='bx bxs-cart'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mainlayout">
+            <div class="link11111">
+                <a style="text-decoration: none;color: #888888" th:href="@{/sanpham}">Trang chủ</a>/
+            </div>
+            <hr>
+            <div class="items-container">
+                <div class="items" th:each="sanpham1 : ${lstsanpham}">
+                    <img th:src="@{'/images/product/' + ${sanpham1.anhSanPham}}" alt="slide1" style="max-width: 170px;max-height: 170px">
+                    <p class="textsplenght" th:text="${sanpham1.tenSanPham}"></p>
+                    <span class="formatprices" th:text="${sanpham1.gia}"></span><br>
+                    <div class="checkss">
+                        <a th:href="@{/sanpham/sanphamchitiet/{id}/{tsp}(id=${sanpham1.id},tsp=${sanpham1.tenSanPham})}">
+                            xem chi tiết
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item" th:classappend="${!lstsanpham.hasPrevious()}? 'disabled'">
+                            <a class="page-link"
+                               th:href="@{/sanpham(page=${lstsanpham.number - 1}, size=${lstsanpham.size})}"><<</a>
+                        </li>
+
+                        <li class="page-item" th:each="i : ${#numbers.sequence(1, lstsanpham.totalPages)}"
+                            th:classappend="${i == lstsanpham.number + 1} ? 'active'">
+                            <a class="page-link" th:href="@{/sanpham(page=${i - 1}, size=${lstsanpham.size})}"
+                               th:text="${i}">1</a>
+                        </li>
+
+                        <li class="page-item" th:classappend="${!lstsanpham.hasNext()}? 'disabled'">
+                            <a class="page-link"
+                               th:href="@{/sanpham(page=${lstsanpham.number + 1}, size=${lstsanpham.size})}">>></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="/js/sanpham.js"></script>
+</html>

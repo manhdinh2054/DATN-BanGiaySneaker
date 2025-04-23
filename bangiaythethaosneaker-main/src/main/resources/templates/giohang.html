@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SanPham</title>
+    <link rel="stylesheet" href="/css/sanpham.css">
+    <link rel="stylesheet" href="/css/cart.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+<div>
+    <div class="d-flex formslogin">
+        <div class="dropdown-container">
+            <button onclick="toggleDropdown()">
+                Hello World
+            </button>
+            <div id="myDropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="">Tài khoản</a>
+                <a class="dropdown-item loggout" onclick="return logoutcheck()" id="" href="/logout">Đăng
+                    Xuất</a>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="headerlayout">
+            <div class="logo-sneaker d-flex">
+                <a th:href="@{/sanpham}">
+                    <img src="/images/logo/logo.jpg" alt="Logo" style="max-width: 100px;">
+                    <h4>Sneaker Shop</h4>
+                </a>
+
+                <div>
+                    <p>Giỏ Hàng</p>
+                </div>
+            </div>
+
+            <div class="danhmucform">
+            </div>
+
+            <div class="searchform">
+                <input class="" placeholder="bạn cần tìm gì?">
+                <button class=""><i class='bx bx-search'></i></button>
+            </div>
+        </div>
+        <div class="mainlayout">
+            <div class="formgiohang">
+                <div>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Ảnh sản phẩm</th>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>Kích cỡ</th>
+                            <th>Số Lượng</th>
+                            <th>Thao tác</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="item,stat : ${cartItems}">
+                            <td th:text="${stat.index + 1}"></td>
+                            <td>
+                                <img th:src="@{'/images/product/'+${item['anhSanPham']}}" alt="slide1"
+                                     style="max-width: 170px;max-height: 170px">
+                            </td>
+                            <td th:text="${item['tenSanPham']}"></td>
+                            <td class="formatprices " th:text="${item['gia']}"></td>
+                            <td th:text="${item['kichCo']}"></td>
+                            <td  th:text="${item['soLuong']}"></td>
+                            <td>
+                                <input type="hidden" class="giasanpham" th:value="${item['gia']}">
+                                <input type="hidden" class="soluong" th:value="${item['soLuong']}">
+                                <button type="button" class="btn btn-danger" th:data-id="${item['idSanPham']}"
+                                        onclick="removeProductFromCart(this)">Xóa
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="thanhtoanform">
+                    <h4>Thông tin thanh toán</h4>
+                    <div class="formthongtin">
+<!--                        <form th:action="@{/cart/addonhangtocartcheckout}" method="post">-->
+                            <input type="text" name="hoVaTen" id="hoVaTen" placeholder="Họ và Tên" required>
+                            <input type="text" name="sdtKhachHang" id="sdtKhachHang" placeholder="Số điện thoại" required>
+                            <input type="text" name="diaChi" id="diaChi" placeholder="Địa chỉ giao hàng" required>
+                            <input type="text" name="email" id="email" placeholder="Email( Không bắt buộc)">
+                            <input type="hidden" name="tongtienthanhtoan12" value="" id="tongtienthanhtoan12" placeholder="Ghi Chú">
+                            <div class="thanhtoan">
+                                <button type="submit" id="thanhtoansssssd" class="btn btn-danger">Thanh Toán</button>
+                            </div>
+<!--                        </form>-->
+                    </div>
+
+                </div>
+            </div>
+            <div class="sotienthanhtoan">
+                <div class="tab1">
+                    <span id="tongsotienthanhtoan"></span>
+
+                </div>
+                <div class="tab2">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<footer class="footerlayout">
+</footer>
+</body>
+<script src="/js/sanpham.js"></script>
+<script src="/js/cart.js"></script>
+</html>

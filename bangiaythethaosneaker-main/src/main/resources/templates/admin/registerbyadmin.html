@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/login.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Register</title>
+</head>
+<body>
+<div class="formlogin">
+    <form id="loginForm" th:action="@{/register}" method="POST">
+        <div class="alert alert-danger" th:if="${error}" style="max-width: 400px;text-align: center">
+            <p th:text="${error}"></p>
+        </div>
+        <h2>Đăng Ký Tài Khoản</h2>
+        <div class="inputbox">
+            <input type="text" id="username" name="username" placeholder="Tài khoản..." required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="inputbox">
+            <input type="password" id="password" name="password" placeholder="Mật khẩu..." required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="inputbox">
+            <input type="email" id="email" name="email" placeholder="Email..." required>
+            <i class='bx bxs-envelope'></i>
+        </div>
+        <div class="inputbox">
+            <select class="form-select" name="roles" id="roles">
+                <option value="ADMIN">Quản trị viên</option>
+                <option value="EMPLOYEE">Nhân viên</option>
+                <option value="CUSTOMER">Khách hàng</option>
+            </select>
+        </div>
+        <div class="registerlink">
+            <p><a href="/login">Đã có tài khoản? Đăng nhập tại đây</a></p>
+        </div>
+        <button class="btnsubmit"  type="submit">Đăng ký</button>
+    </form>
+
+</div>
+
+
+</body>
+</html>

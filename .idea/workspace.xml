@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="19dd73be-bf98-45ee-8f7d-2fd9a127a9ec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/hs_err_pid10808.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/hs_err_pid10820.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/hs_err_pid12156.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/hs_err_pid1784.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/hs_err_pid5364.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/hs_err_pid8380.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Api/GioHangApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Api/HoaDonApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Api/KhuyenMaiApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Api/SanPhamApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/BanGiayTheThaoSneakerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Config/AccessDeniedConponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Config/ImageConfigDirection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Admin/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Admin/AdminRegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Admin/BanHangTaiQuayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Admin/HoaDonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Admin/QuanLiKhachHangController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Admin/QuanLiKhuyenMaiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Admin/QuanLiNhanVienController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Admin/QuanLiSanPhamController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Admin/ThongKeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Employee/EmployeeController1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Employee/EmployeeThongKeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Employee/NhanVienBanHangTaiQuayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/Employee/NhanVienHoaDonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/FixErrorCodeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/ForgotPasswordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/GiohangController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/ReturnPaySuccessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/SanPhamController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/UserRegisterController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Controller/VNPAYReturnController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/DanhMuc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/DonHang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/DonHangChiTiet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/DonHangChiTietDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/DonHangDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/GiamGia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/HoaDon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/HoaDonChiTiet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/HoaDonChiTietDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/HoaDonDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/SanPham.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/SanPhamChiTiet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/SanPhamDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/TempEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Entity/ThuongHieu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/DanhMucRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/DonHangChiTietDTORepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/DonHangChiTietRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/DonHangDTORepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/DonHangRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/EmployeeTempRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/HoaDonChiTietDTORepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/HoaDonChiTietRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/HoaDonDTORepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/HoaDonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/KhuyenMaiRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/SanPhamChiTietRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/SanPhamDTORepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/SanPhamRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Repository/ThuongHieuRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/AccountServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/AccountServicesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/ChuyenHoaDonServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/Cookie/CookieServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/Cookie/ParamServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/Cookie/SessionServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/CreatePDF/CreatePdfHoaDonServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/CustomUserDetailServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/DonHangServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/Encode/Base64Services.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/ForgotPasswordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/HoaDonServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/KhuyenMaiServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/SanPhamChiTietServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/SanPhamServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/Services/ThongKeServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/VNPAY/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/VNPAY/ajaxServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/VNPAY/vnpayQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/java/org/example/baitapbuoi3/bangiaythethaosneaker/VNPAY/vnpayRefund.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/banhangtaiquay.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/quanlikhachhang.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/quanlinhanvien.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/quanlisanpham.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/sanpham.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/sanphamchitiet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/thongbao.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/css/thongke.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/js/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/js/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/js/khuyenmai.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/js/muahangtaiquay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/js/nhanvien.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/js/quanlisanpham.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/js/sanpham.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/static/js/sanphamchitiet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/VNPAY/orderFailed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/VNPAY/orderSuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/chinhsuasanpham.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/chinhsuasanphamchitiet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/lichsuhoadon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/lichsuhoadonchitiet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/muahangtaiquay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/muahangtaiquay1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/quanlihoadon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/quanlihoadonchitiet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/quanlikhachhang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/quanlikhachhangdetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/quanlikhuyenmai.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/quanlinhanvien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/quanlinhanviendetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/quanlisanpham.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/quanlisanphamdetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/registerbyadmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/thongbaothanhtoan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/admin/thongke.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/adminemployeelogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/employee/employeelichsuhoadon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/employee/employeelichsuhoadonchitiet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/employee/employeemuahangtaiquay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/employee/employeemuahangtaiquay1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/employee/employeequanlihoadon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/employee/employeequanlihoadonchitiet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/employee/employeethongbaothanhtoan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/employee/thongke.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/forgotpass/forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/forgotpass/reset-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/forgotpass/resetpasswordsuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/forgotpass/sendemailsuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/giohang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/registerbyuser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/sanpham.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/sanphamchitiet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/sanphamdanhmuc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/sanphamthuonghieu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/main/resources/templates/userlogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/banGiayTheThaoSneakerTest/src/test/java/org/example/baitapbuoi3/bangiaythethaosneaker/BanGiayTheThaoSneakerApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="com.intellij.jpb.JpaEntity" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/banGiayTheThaoSneakerTest" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;manhdinh2054&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/manhdinh2054/TTTN-IKU.git&quot;,
+    &quot;accountId&quot;: &quot;f7b4d172-e152-4d7a-a838-6faa62c6a900&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2obZZyjxpE7mZNHk2tbLcA4feSO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BanGiayTheThaoSneakerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/HOCTAP/Java6/banGiayTheThaoSneakerTest&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\HOCTAP\Java6\banGiayTheThaoSneakerTest\src\main\resources\templates\admin" />
+      <recent name="D:\HOCTAP\Java6\banGiayTheThaoSneakerTest\src\main\resources\templates\employee" />
+      <recent name="D:\HOCTAP\Java6\banGiayTheThaoSneakerTest\src\main\java\org\example\baitapbuoi3\bangiaythethaosneaker\VNPAY" />
+      <recent name="D:\HOCTAP\Java6\banGiayTheThaoSneakerTest\src\main\resources\templates" />
+      <recent name="D:\HOCTAP\Java6\banGiayTheThaoSneakerTest\src\main\resources\static\js\sss" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\HOCTAP\Java6\banGiayTheThaoSneakerTest\src\main\resources\templates\VNPAY" />
+      <recent name="D:\HOCTAP\Java6\banGiayTheThaoSneakerTest\src\main\resources\templates\admin" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.baitapbuoi3.bangiaythethaosneaker.Repository" />
+      <recent name="org.example.baitapbuoi3.bangiaythethaosneaker.Entity" />
+      <recent name="org.example.baitapbuoi3.bangiaythethaosneaker.Controller.Employee" />
+      <recent name="org.example.baitapbuoi3.bangiaythethaosneaker.Controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BanGiayTheThaoSneakerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="banGiayTheThaoSneaker" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.baitapbuoi3.bangiaythethaosneaker.BanGiayTheThaoSneakerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.baitapbuoi3.bangiaythethaosneaker.BanGiayTheThaoSneakerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="19dd73be-bf98-45ee-8f7d-2fd9a127a9ec" name="Changes" comment="" />
+      <created>1731140295117</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731140295117</updated>
+      <workItem from="1731140296200" duration="14795000" />
+      <workItem from="1731155257264" duration="2001000" />
+      <workItem from="1731213609763" duration="7324000" />
+      <workItem from="1731221051591" duration="4765000" />
+      <workItem from="1731226724609" duration="287000" />
+      <workItem from="1731228005274" duration="5731000" />
+      <workItem from="1731240994795" duration="14114000" />
+      <workItem from="1731307775818" duration="9327000" />
+      <workItem from="1731318554959" duration="3904000" />
+      <workItem from="1731326865870" duration="18618000" />
+      <workItem from="1731396637842" duration="386000" />
+      <workItem from="1731397043204" duration="58000" />
+      <workItem from="1731397167526" duration="220000" />
+      <workItem from="1731397403926" duration="284000" />
+      <workItem from="1731397696072" duration="10418000" />
+      <workItem from="1731472482970" duration="603000" />
+      <workItem from="1731508253667" duration="4029000" />
+      <workItem from="1731650079684" duration="11772000" />
+      <workItem from="1731673259862" duration="6240000" />
+      <workItem from="1731738356349" duration="5847000" />
+      <workItem from="1731821830007" duration="4942000" />
+      <workItem from="1731836072762" duration="2375000" />
+      <workItem from="1731846804123" duration="2575000" />
+      <workItem from="1731849758401" duration="1632000" />
+      <workItem from="1731907452625" duration="1642000" />
+      <workItem from="1731909254790" duration="2665000" />
+      <workItem from="1731934462778" duration="9526000" />
+      <workItem from="1732011433107" duration="1164000" />
+      <workItem from="1732027476111" duration="381000" />
+      <workItem from="1732071100311" duration="11376000" />
+      <workItem from="1732108157165" duration="7720000" />
+      <workItem from="1732118846032" duration="3962000" />
+      <workItem from="1732167642501" duration="3968000" />
+      <workItem from="1732182216585" duration="1754000" />
+      <workItem from="1732203084573" duration="11078000" />
+      <workItem from="1732345655998" duration="6097000" />
+      <workItem from="1732365938576" duration="5476000" />
+      <workItem from="1732379777522" duration="40000" />
+      <workItem from="1732379825811" duration="38000" />
+      <workItem from="1732379888752" duration="39000" />
+      <workItem from="1732379984532" duration="102000" />
+      <workItem from="1732380224159" duration="80000" />
+      <workItem from="1732380701779" duration="22000" />
+      <workItem from="1732544172540" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.microsoft.sqlserver.jdbc.SQLServerException" package="com.microsoft.sqlserver.jdbc" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

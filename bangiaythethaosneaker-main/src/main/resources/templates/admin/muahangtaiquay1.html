@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.springframework.org/security/tags">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/banhangtaiquay.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="contentarea">
+
+    <div class="headerlayout">
+        <div sec:authorize="isAuthenticated()">
+            <div class="formloginuser">
+                <div class="ussdds">
+                    <span style="color: black">ADMIN</span>
+                </div>
+
+                <form th:action="@{/logout}" method="post">
+                    <button id="buttonlogout" class="buttonlogout" type="submit">Đăng xuất</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="optionslayout">
+        <div class="imglayout">
+            <img src="/images/logo/logo.jpg" alt="logo" width="150px">
+            <h4>Admin Panel</h4>
+        </div>
+        <div class="taskbar">
+            <button id="btnchange">
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a class="mainmenuoption" href="#">Quản lí sản phẩm</a>
+                    <i id="dmms" class="fa-solid1 fa-solid fa-angle-right fa-spin fa-spin-reverse fa-2xs"></i>
+                </div>
+                <ul class="submenu">
+                    <li><a href="/admin/quanlisanpham">Sản Phẩm</a></li>
+                    <li><a href="#">Thương hiệu</a></li>
+                </ul>
+            </button>
+            <button>
+                <i class="fa-solid fa-receipt"></i>
+                <a href="/admin/quanlihoadon/quanli">Quản lý hóa đơn</a>
+            </button>
+            <button id="btnchange1">
+                <div>
+                    <i class="fa-solid fa-clipboard-user"></i>
+                    <a class="mainmenuoption" href="#">Quản lý Tài Khoản</a>
+                    <i id="dmms1" class="fa-solid1 fa-solid fa-angle-right fa-spin fa-spin-reverse fa-2xs"></i>
+                </div>
+                <ul class="submenu1">
+                    <li><a href="/admin/quanlinhanvien">Nhân Viên</a></li>
+                    <li><a href="/admin/quanlikhachhang">Khách Hàng</a></li>
+                </ul>
+            </button>
+            <button>
+                <i class="fa-solid fa-ticket"></i>
+                <a href="/admin/quanlikhuyenmai">Quản lý khuyến mại </a>
+            </button>
+            <button>
+                <i class="fa-solid fa-chart-line"></i>
+                <a href="/admin/thongke">Thống kê</a>
+            </button>
+        </div>
+    </div>
+    <div class="mainlayout">
+        <div class="tablelistsanpham">
+            <div class="tablelistsanpham1">
+                <div>
+                    <h3>Bán hàng</h3>
+                    <form th:action="@{/admin/muahangtaiquay/add}" method="post">
+
+                        <button type="submit" class="btn btn-primary">Tạo đơn hàng</button>
+                        <input type="hidden" id="check5hoadon" th:if="${errorthemhoadon}" th:value="${errorthemhoadon}">
+                    </form>
+                    <div class="dohangform">
+                        <div th:if="lstdonhang1" th:each="lstdonhang1,stat:${lstdonhang}">
+                            <a th:href="@{/admin/muahangtaiquay/{id}(id=${lstdonhang1.id})}">
+                                <button class="formbutton1" type="button" id="clickhoadon" th:value="${lstdonhang1.id}"
+                                        th:text="'Đơn Hàng' +${stat.index+1}+'- ID:'+${lstdonhang1.id}">
+                                </button>
+                            </a>
+
+                            <a class="remove-button"
+                               th:href="@{/admin/muahangtaiquay/delete/{id}(id=${lstdonhang1.id})}"><i
+                                    class="fa-solid fa-x fa-2xs" style="color: #000000;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tablelistsanpham2">
+                    <button class="addsanpham btn btn-secondary" id="openmodal">Thêm sản phẩm</button>
+                    <h4>Sản Phẩm</h4>
+                    <form th:action="@{/admin/muahangtaiquay/addhoadon}" method="post">
+                        <input type="hidden" name="idsss" th:value="${donhangtrongsp.id}">
+                        <table class="table" id="tablesss">
+                            <thead>
+                            <tr>
+                                <th>IDSP</th>
+<!--                                <th>Mã Sản Phẩm</th>-->
+                                <th>Ảnh</th>
+                                <th>Tên Sản Phẩm</th>
+                                <th>Kích cỡ</th>
+                                <th>Số Lượng</th>
+                                <th>Đơn Giá</th>
+                                <th>Thao tác</th>
+                            </tr>
+                            </thead>
+                            <tbody th:each="sss:${donhangchitietlst}">
+                            <tr>
+                                <td th:text="${sss.id}"></td>
+<!--                                <td th:text="${sss.maSanPham}"></td>-->
+                                <td>
+                                    <img th:src="@{'/images/product/'+${sss.anhSanPham}}" width="100px">
+                                </td>
+                                <td th:text="${sss.tenSanPham}"></td>
+                                <td th:text="${sss.kichCo}"></td>
+                                <td class="soluongsp111" th:text="${sss.soLuong}"></td>
+                                <td class="giasp111" th:text="${sss.donGia}"></td>
+                                <td>
+                                    <a th:href="@{/admin/muahangtaiquay/deletespsss/{id}/{idDonHang}(id=${sss.id}, idDonHang=${donhangtrongsp.id})}">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="submitdonhang" th:each="thongtindonhang:${donhangtrongsp}">
+                            <input type="hidden" th:value="${thongtindonhang.id}">
+
+                            <div>
+                                <div>
+                                    <button id="btntienmat" class="btn btn-primary">Thanh Toán Tiền Mặt</button>
+                                    <button id="btnchuyenkhoan" class="btn btn-secondary">Chuyển Khoản</button>
+
+                                </div>
+                                <div class="displayloaithanhtoantienmat">
+                                    <label class="form-label">Khách trả:</label>
+                                    <input class="form-control" type="number" id="khachtra" name="khachTra"
+                                           oninput="khachTra1111()">
+                                </div>
+                                <div class="displaylaoithanhtoanchuyenkhoan">
+                                    <label class="form-label">Mã Giao Dịch</label>
+                                    <input class="form-control" type="text" id="maGiaoDich" name="maGiaoDich"><br>
+                                    <label class="form-label">Số Tiền Cần Trả:</label>
+                                    <input class="form-control" type="text" id="soTienThanhToan">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-content">
+                                    <label class="form-label">Tên Khách Hàng:</label>
+                                    <input class="form-control" type="text" id="tenKhachhang" name="tenKhachhang">
+                                </div>
+                                <div class="form-content">
+                                    <label class="form-label">SĐT:</label>
+                                    <input class="form-control" type="text" id="sdtKhachHang" name="sdtKhachHang">
+                                </div>
+
+                            </div>
+                            <div>
+                                <label>Tổng Số Tiền:</label><label id="tongtien111"></label><br>
+                                <input type="hidden" id="tongtien1" name="tongTien">
+                                <label>Khách trả:</label><label id="khachtra111"></label><br>
+                                <label>Số Tiền Thanh Toán:</label><label id="soTienThanhToan111"></label><br>
+                            </div>
+                        </div>
+                        <button type="submit" class=" thanhtoans btn btn-primary ">Thanh Toán</button>
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+
+<div id="Modal-form">
+    <div class="modal-content">
+        <div class="modal-1">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Danh Sách Sản Phẩm</h2>
+            <div class="d-flex">
+                    <label>Tìm Kiếm:</label>
+                    <input type="text" class="form-control" id="searchsanpham" placeholder="Nhập từ khóa...">
+            </div>
+
+        </div>
+
+        <form th:action="@{/admin/muahangtaiquay/addsanpham}" method="post" class="formmain">
+            <div class="moidal-1">
+                <table id="tablesanpham111" class="table table-wrapper">
+                    <thead>
+                    <tr>
+                        <th>STT</th>
+<!--                        <th>Mã sản phẩm</th>-->
+                        <th>Tên sản phẩm</th>
+                        <th>Ảnh</th>
+                        <th>Kích cỡ</th>
+                        <th>Kho</th>
+                        <th>Giá</th>
+                        <th>Thao tác</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="sanphamlst,stat:${sanphamsss}">
+                        <td th:text="${stat.index +1}"></td>
+<!--                        <td th:text="${sanphamlst.maSanPham}"></td>-->
+                        <td th:text="${sanphamlst.tenSanPham}"></td>
+                        <td>
+                            <img th:src="@{'/images/product/' +${sanphamlst.anhSanPham}}" alt="rel" width="100px" height="auto">
+                        </td>
+                        <td th:text="${sanphamlst.kichCo}"></td>
+                        <td th:text="${sanphamlst.soLuong}"></td>
+                        <td class="giasp111 formatprices" th:text="${sanphamlst.donGia}"></td>
+                        <td>
+                            <input type="hidden" name="idsss" th:value="${donhangtrongsp.id}">
+                            <input type="hidden" name="idDonHang" th:value="${donhangtrongsp.id}">
+                            <input type="hidden" name="kichCo" id="kichCo" th:value="${sanphamlst.kichCo}">
+                            <input type="hidden" name="donGia" th:value="${sanphamlst.donGia}">
+                            <input class="selectsss" type="checkbox" name="idSanPham" th:value="${sanphamlst.id}"
+                                   onchange="checkvali()">
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="ssssssf">
+                <div>
+                    <label>Số Lượng:</label>
+                    <button type="button" id="giamSL" class="btn btn-basic btn-sm">-</button>
+                    <input type="number" class="soLuong11" id="valueSL" name="soLuong" min="1" value="1"
+                           style="width: 50px;">
+                    <button type="button" id="tangSL" class="btn btn-basic btn-sm">+</button>
+                </div>
+                <div>
+                    <button type="submit" id="submitaddsp" class=" btn btn-secondary" disabled>Thêm Sản Phẩm</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+</div>
+<script src="/js/admin.js"></script>
+<script src="/js/muahangtaiquay.js"></script>
+<script src="https://kit.fontawesome.com/39f1c218af.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+</html>

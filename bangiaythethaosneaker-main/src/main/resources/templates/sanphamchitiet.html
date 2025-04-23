@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SanPhamChiTiet</title>
+    <link rel="stylesheet" href="/css/sanpham.css">
+    <link rel="stylesheet" href="/css/sanphamchitiet.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div>
+    <div class="d-flex formslogin">
+        <div class="dropdown-container">
+            <button onclick="toggleDropdown()">
+                Hello World
+            </button>
+            <div id="myDropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <p></p>
+                <a class="dropdown-item" href="#">Giỏ hàng</a>
+                <a class="dropdown-item" href="">Tài khoản</a>
+                <a class="dropdown-item loggout" onclick="return logoutcheck()" id="" href="/logout">Đăng
+                    Xuất</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="headerlayout">
+            <div class="logo-sneaker">
+                <a th:href="@{/sanpham}">
+                    <img src="/images/logo/logo.jpg" alt="Logo" style="max-width: 100px;">
+                    <h4>Sneaker Shop</h4>
+                </a>
+            </div>
+
+            <div class="danhmucform">
+                <div>
+                    <button class="btn" id="hoverdanhmuc">Danh Mục</button>
+                    <ul class="formhoverdanhmuc">
+                        <li th:each="damhmuclst:${lstdanhmuc}">
+                            <a th:href="@{/sanpham/danhmuc/{id}(id=${damhmuclst.id})}">
+                                <span th:text="${damhmuclst.tenDanhMuc}"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <button class="btn" id="hoverthuonghieu">Thương Hiệu</button>
+                    <ul class="formhoverthuonghieu">
+                        <li th:each="lstthuonghieu1:${lstthuonghieu}">
+                            <a th:href="@{/sanpham/thuonghieu/{id}(id=${lstthuonghieu1.id})}">
+                                <span th:text="${lstthuonghieu1.tenThuongHieu}"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="searchform">
+                <input class="" placeholder="bạn cần tìm gì?">
+                <button class=""><i class='bx bx-search'></i></button>
+            </div>
+            <div class="cartform">
+                <div class="giohang">
+                    <a th:href="@{/cart/view}"><i class='bx bxs-cart'></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="layoutchitiet">
+            <div class="link11111">
+                <a style="text-decoration: none;color: #888888" th:href="@{/sanpham}">Trang chủ</a>
+                <a href="javascript:void(0)" style="text-decoration: none;color: #333333" th:text="${sanphamchitietlst.tenSanPham}"></a>
+            </div>
+                <div class="settinglayout">
+                    <div class="itemchitiet">
+                        <div class="imgchitiet">
+                            <img th:src="@{'/images/product/' + ${sanphamchitietlst.anhSanPham}}" onerror="this.src='/images/logo/no_image.jpg';"
+                                 style="max-width: 171px;max-height: 171px" alt="">
+                            <input type="hidden" id="anhSanPham" th:value="${sanphamchitietlst.anhSanPham}">
+
+                        </div>
+                        <div class="noidungchitietsanpham">
+                            <input type="hidden" id="idSanPham" th:value="${sanphamchitietlst.id}">
+                            <p id="tenSanPham" th:text="${sanphamchitietlst.tenSanPham}"></p>
+                            <div class="pricechitiet noidungchitietsanpham1">
+                                <input type="hidden" id="giaSanPham" th:value="${sanphamchitietlst.gia}">
+                                <span id="formatprices"  th:text="${sanphamchitietlst.gia}"></span><br>
+                            </div>
+                            <div class="kichcochitiet noidungchitietsanpham1">
+                                <span>Kích cỡ:</span>
+                                <label class="custom-size" th:each="sanphamkichco:${lstsanphambt}">
+                                    <input type="hidden" id="maSanPham" name="maSanPham" th:value="${sanphamkichco.maSanPham}">
+                                    <input type="radio" name="kichCo" id="kichCo" th:value="${sanphamkichco.kichCo}" th:onchange="|soLuongCheck(${sanphamkichco.kichCo})|">
+                                    <span class="checkmark"></span>
+                                    <span class="font-ssss" th:text="${sanphamkichco.kichCo}"></span>
+                                </label>
+                            </div>
+                            <label>Số Lượng:</label>
+                            <div class="d-flex">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" id="button-minus" class="btn btn-basic  btn111">-</button>
+                                    <input name="soLuong" type="text" id="number-input" value="1" min="1" max=""
+                                           class="form-control btn111">
+                                    <button type="button" id="button-plus" class="btn btn-basic btn111">+</button>
+                                </div>
+                                <div id="soLuongContainer">
+                                    <div id="soLuong" style="margin-top: 20px;">Số lượng tồn:</div>
+                                </div>
+                            </div>
+
+                            <div class="addcart noidungchitietsanpham1">
+                                <input type="hidden" name="id" th:value="${sanphamchitietlst.id}">
+
+                                <button onclick="addToCart()" class="btn btn-primary btn111">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                        <div class="detailsanpham">
+                            <h4>Thông tin chi tiết sản phẩm</h4>
+                            <div>
+                                <div>
+                                    <label>Thương hiệu:</label>
+                                    <span th:text="${sanphamchitietlst.idThuongHieu.tenThuongHieu}"></span>
+                                </div>
+                                <div>
+                                    <label>Màu sắc:</label>
+                                    <span th:text="${sanphamchitietlst.mausac}"></span>
+                                </div>
+                                <div>
+                                    <label>Danh mục:</label>
+                                    <span th:text="${sanphamchitietlst.idDanhMuc.tenDanhMuc}"></span>
+                                </div>
+                                <div>
+                                    <label>Mô tả:</label>
+                                    <span th:text="${sanphamchitietlst.moTa}"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            <div class="detailinformations">
+                <h3>Thông tin sản phẩm</h3>
+                <hr>
+                <div>
+                    <p th:text="${sanphamchitietlst.moTa}"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="/js/sanphamchitiet.js"></script>
+<script src="/js/cart.js"></script>
+</html>
